@@ -15,9 +15,10 @@ jobs:
         run: sudo apt-get install gcc g++
         
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: 🎉 Run the resault
         run: |
           mkdir ${{ github.workspace }}/build
           g++ ${{ github.workspace }}/Lab1-HelloWord/main.cpp -o ${{ github.workspace }}/build/test
           ${{ github.workspace }}/build/test
+          echo 5
       - run: echo "🍏 This job's status is ${{ job.status }}."
