@@ -10,10 +10,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      
+      - name: Install GCC
+        run: sudo apt-get install gcc g++
+        
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
-          cd ${{ github.workspace }}/Lab1-HelloWord
-          ls
+          mkdir ${{ github.workspace }}/build
+          g++ ${{ github.workspace }}/Lab1-HelloWord/main.cpp -o ${{ github.workspace }}/build/test
+          ${{ github.workspace }}/build/test
       - run: echo "🍏 This job's status is ${{ job.status }}."
