@@ -7,6 +7,15 @@ int main() {
 	printf("Hello World\n");
 	scanf("%d", &i);
 	printf("input is %d\n", i);
+
+	scanf(" %d", &i);
+	printf("input is %d\n", i);
+
+	scanf(" %d", &i);
+	printf("input is %d\n", i);
+
+	scanf(" %d", &i);
+	printf("input is %d\n", i);
 	system("pause");
 	return 0;
 }
