@@ -19,6 +19,5 @@ jobs:
         run: |
           mkdir ${{ github.workspace }}/build
           g++ ${{ github.workspace }}/Lab1-HelloWord/main.cpp -o ${{ github.workspace }}/build/test
-          ${{ github.workspace }}/build/test
-          echo 5
+          echo 5 | ${{ github.workspace }}/build/test
       - run: echo "🍏 This job's status is ${{ job.status }}."
